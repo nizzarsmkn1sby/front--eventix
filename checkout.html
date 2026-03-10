@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Eventix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></div>
+                <div class="logo-text"><span class="logo-name">Eventix</span></div>
+            </a>
+            <div class="nav-auth">
+                <a href="event-detail.html" class="btn btn-outline btn-sm">← Kembali</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="checkout-page">
+        <div class="container">
+            <div style="margin-bottom:2rem;">
+                <h1 style="font-size:1.75rem;font-weight:800;">Checkout</h1>
+                <p style="color:var(--text-muted);">Selesaikan pembayaran untuk mendapatkan tiket Anda</p>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- LEFT: Payment form -->
+                <div>
+                    <div class="checkout-section">
+                        <div class="checkout-section-header">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                                <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <path d="M16 3H8L4 7h16l-4-4z" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            Metode Pembayaran
+                        </div>
+                        <div class="checkout-section-body">
+                            <div class="payment-method">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="gopay" checked>
+                                    <div>
+                                        <div class="payment-option-label">🟢 GoPay</div>
+                                        <div class="payment-option-sub">Bayar menggunakan saldo GoPay</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="ovo">
+                                    <div>
+                                        <div class="payment-option-label">🟣 OVO</div>
+                                        <div class="payment-option-sub">Bayar menggunakan saldo OVO</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="dana">
+                                    <div>
+                                        <div class="payment-option-label">🔵 DANA</div>
+                                        <div class="payment-option-sub">Bayar menggunakan saldo DANA</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="bca">
+                                    <div>
+                                        <div class="payment-option-label">🏦 Transfer Bank BCA</div>
+                                        <div class="payment-option-sub">Virtual Account BCA</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="qris">
+                                    <div>
+                                        <div class="payment-option-label">📱 QRIS</div>
+                                        <div class="payment-option-sub">Scan QR Code dari aplikasi manapun</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cc">
+                                    <div>
+                                        <div class="payment-option-label">💳 Kartu Kredit / Debit</div>
+                                        <div class="payment-option-sub">Visa, Mastercard, JCB</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="terms-note" style="text-align:left;margin-top:1rem;">
+                                Dengan melanjutkan, Anda menyetujui <a href="#">Syarat & Ketentuan</a> kami
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="checkout-section">
+                        <div class="checkout-section-header">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor"
+                                    stroke-width="2" />
+                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            Data Pemesan
+                        </div>
+                        <div class="checkout-section-body">
+                            <div class="form-row">
+                                <div class="form-group" style="margin-bottom:0;">
+                                    <label class="form-label" style="color:var(--text);">Nama Lengkap</label>
+                                    <input type="text" class="form-control light" value="User Demo" readonly>
+                                </div>
+                                <div class="form-group" style="margin-bottom:0;">
+                                    <label class="form-label" style="color:var(--text);">Email</label>
+                                    <input type="email" class="form-control light" value="user@eventix.com" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Order Summary -->
+                <div>
+                    <div class="order-summary-card">
+                        <div class="order-summary-title">Ringkasan Pesanan</div>
+
+                        <div class="order-event-mini">
+                            <div class="order-event-mini-banner music-bg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 18V5l12-2v13" stroke="white" stroke-width="1.5" />
+                                    <circle cx="6" cy="18" r="3" stroke="white" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Java Jazz Festival 2025</h4>
+                                <p>25 Apr 2025, 19:00 · Online</p>
+                                <p>1 Tiket</p>
+                            </div>
+                        </div>
+
+                        <div class="order-id-box">
+                            <label>Order ID</label>
+                            <span>EVX-ORD-2025-00124</span>
+                        </div>
+
+                        <div class="price-breakdown">
+                            <div class="price-row"><span>Harga tiket (×1)</span><span>Rp 350.000</span></div>
+                            <div class="price-row"><span>Biaya layanan (3%)</span><span>Rp 10.500</span></div>
+                        </div>
+                        <div class="price-row total"><span>Total Pembayaran</span><span style="color:var(--primary);">Rp
+                                360.500</span></div>
+
+                        <button onclick="handleCheckout()" class="btn btn-primary"
+                            style="width:100%;justify-content:center;margin-top:1.5rem;padding:0.9rem;font-size:1rem;">
+                            Bayar Sekarang
+                        </button>
+                        <div class="secure-note" style="margin-top:1rem;">
+                            🔒 Transaksi aman dengan enkripsi SSL<br>
+                            💳 Powered by <strong>Midtrans</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Eventix. Dikembangkan dengan ❤️ oleh Tim Dev Eventix.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function handleCheckout() {
+            const btn = event.target;
+            btn.textContent = '⏳ Memproses Pembayaran...';
+            btn.disabled = true;
+            setTimeout(() => {
+                alert('✅ Pembayaran berhasil! Tiket Anda sudah dikirim ke email.');
+                window.location.href = 'ticket-detail.html';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

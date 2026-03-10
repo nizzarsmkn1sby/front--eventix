@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Event Baru - Eventix Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <div class="logo-text"><span class="logo-name">Eventix</span><span class="logo-sub">Admin
+                            Panel</span></div>
+                </a>
+            </div>
+            <nav class="admin-sidebar-nav">
+                <div class="admin-nav-group">MAIN MENU</div>
+                <a href="admin-dashboard.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="admin-events.html" class="admin-nav-item active">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" />
+                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Kelola Events
+                </a>
+                <a href="admin-transactions.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                        <path d="M2 10h20" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Transaksi
+                </a>
+                <div class="admin-nav-group">SETTINGS</div>
+                <a href="index.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                    Ke Halaman Utama
+                </a>
+                <a href="login.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <span class="admin-topbar-title">Buat Event Baru</span>
+                <div class="admin-user">
+                    <div class="admin-user-avatar">A</div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-page-header">
+                    <div>
+                        <div class="admin-page-title">Buat Event Baru</div>
+                        <div class="admin-page-sub">Rancang acara luar biasa Anda hari ini ✨</div>
+                    </div>
+                    <a href="admin-dashboard.html" class="btn btn-outline">← Batal</a>
+                </div>
+
+                <form onsubmit="handleCreateEvent(event)">
+                    <div class="card" style="margin-bottom:1.5rem;">
+                        <div class="card-header">📋 Informasi Dasar</div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label" style="color:var(--text);">Judul Event <span
+                                        style="color:var(--danger)">*</span></label>
+                                <input type="text" class="form-control light"
+                                    placeholder="Contoh: Java Jazz Festival 2025" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Tipe Event <span
+                                            style="color:var(--danger)">*</span></label>
+                                    <select class="select-control" required>
+                                        <option value="">-- Pilih Tipe --</option>
+                                        <option>Musik & Konser</option>
+                                        <option>Webinar</option>
+                                        <option>Comedy</option>
+                                        <option>Pameran & Festival</option>
+                                        <option>Olahraga</option>
+                                        <option>Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Tipe Lokasi <span
+                                            style="color:var(--danger)">*</span></label>
+                                    <select class="select-control" id="locType" onchange="toggleLocField()" required>
+                                        <option value="">-- Pilih Lokasi --</option>
+                                        <option value="online">Online</option>
+                                        <option value="offline">Offline</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group" id="offlineLocField" style="display:none;">
+                                <label class="form-label" style="color:var(--text);">Alamat Lokasi</label>
+                                <input type="text" class="form-control light"
+                                    placeholder="Contoh: GBK, Jakarta Selatan">
+                            </div>
+                            <div class="form-group" id="onlineLocField" style="display:none;">
+                                <label class="form-label" style="color:var(--text);">Link Meeting</label>
+                                <input type="url" class="form-control light" placeholder="https://zoom.us/...">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color:var(--text);">Deskripsi Event <span
+                                        style="color:var(--danger)">*</span></label>
+                                <textarea class="textarea-control" placeholder="Jelaskan event Anda secara detail..."
+                                    required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom:1.5rem;">
+                        <div class="card-header">📅 Waktu & Tiket</div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Tanggal Event <span
+                                            style="color:var(--danger)">*</span></label>
+                                    <input type="datetime-local" class="form-control light" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Kuota Tiket <span
+                                            style="color:var(--danger)">*</span></label>
+                                    <input type="number" class="form-control light" placeholder="500" min="1" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Harga Tiket (Rp)</label>
+                                    <input type="number" class="form-control light" placeholder="0 untuk GRATIS"
+                                        min="0">
+                                </div>
+                                <div class="form-group" style="display:flex;align-items:flex-end;">
+                                    <div class="form-check" style="margin-bottom:0;">
+                                        <input type="checkbox" id="isFree" onchange="toggleFreeTicket()">
+                                        <label for="isFree" style="color:var(--text);">Event Gratis</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom:1.5rem;">
+                        <div class="card-header">🖼️ Banner Event</div>
+                        <div class="card-body">
+                            <label class="file-upload-area" for="bannerUpload">
+                                <div class="file-upload-icon">📁</div>
+                                <strong>Klik untuk upload banner</strong><br>
+                                <small>Max 2MB, format: JPG, PNG, GIF</small>
+                                <input type="file" id="bannerUpload" accept="image/*" style="display:none;">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:1rem;justify-content:flex-end;">
+                        <a href="admin-dashboard.html" class="btn btn-outline btn-lg">Batal</a>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                                <polyline points="17 21 17 13 7 13 7 21" stroke="currentColor" stroke-width="2" />
+                                <polyline points="7 3 7 8 15 8" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            Simpan Event
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function toggleLocField() {
+            const val = document.getElementById('locType').value;
+            document.getElementById('offlineLocField').style.display = val === 'offline' ? 'block' : 'none';
+            document.getElementById('onlineLocField').style.display = val === 'online' ? 'block' : 'none';
+        }
+        function toggleFreeTicket() {
+            const cb = document.getElementById('isFree');
+            const priceInput = document.querySelector('input[placeholder="0 untuk GRATIS"]');
+            if (cb.checked) { priceInput.value = 0; priceInput.disabled = true; }
+            else { priceInput.disabled = false; }
+        }
+        function handleCreateEvent(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('[type="submit"]');
+            btn.textContent = '⏳ Menyimpan...';
+            btn.disabled = true;
+            setTimeout(() => {
+                alert('✅ Event berhasil dibuat!');
+                window.location.href = 'admin-events.html';
+            }, 1500);
+        }
+    </script>
+</body>
+
+</html>

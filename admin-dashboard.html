@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Eventix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <div class="logo-text"><span class="logo-name">Eventix</span><span class="logo-sub">Admin
+                            Panel</span></div>
+                </a>
+            </div>
+            <nav class="admin-sidebar-nav">
+                <div class="admin-nav-group">MAIN MENU</div>
+                <a href="admin-dashboard.html" class="admin-nav-item active">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="admin-events.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" />
+                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                    Kelola Events
+                </a>
+                <a href="admin-transactions.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                        <path d="M2 10h20" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Transaksi
+                </a>
+                <div class="admin-nav-group">SETTINGS</div>
+                <a href="index.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                    Ke Halaman Utama
+                </a>
+                <a href="login.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <div>
+                    <button id="adminSidebarToggle"
+                        style="background:none;border:none;cursor:pointer;margin-right:1rem;display:none;">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                            <path d="M3 12h18M3 6h18M3 18h18" stroke="#1e293b" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <span class="admin-topbar-title">Dashboard Admin</span>
+                </div>
+                <div class="admin-user">
+                    <div style="text-align:right;">
+                        <div style="font-size:0.875rem;font-weight:700;">Admin Eventix</div>
+                        <div style="font-size:0.75rem;color:var(--text-muted);">admin@eventix.com</div>
+                    </div>
+                    <div class="admin-user-avatar">A</div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-page-header">
+                    <div>
+                        <div class="admin-page-title">Admin Dashboard</div>
+                        <div class="admin-page-sub">Selamat datang, Admin EMS! 👋</div>
+                    </div>
+                    <a href="admin-create-event.html" class="btn btn-primary">
+                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Buat Event Baru
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">🎪</div>
+                        <div>
+                            <div class="stat-card-num">12</div>
+                            <div class="stat-card-label">Total Events</div>
+                            <div class="stat-card-change change-up">↑ 3 bulan ini</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">🎟️
+                        </div>
+                        <div>
+                            <div class="stat-card-num">847</div>
+                            <div class="stat-card-label">Tiket Terjual</div>
+                            <div class="stat-card-change change-up">↑ 124 minggu ini</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">💰</div>
+                        <div>
+                            <div class="stat-card-num">Rp 42,5jt</div>
+                            <div class="stat-card-label">Total Pendapatan</div>
+                            <div class="stat-card-change change-up">↑ 18% dari bulan lalu</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#ffedd5,#fed7aa);">👥</div>
+                        <div>
+                            <div class="stat-card-num">532</div>
+                            <div class="stat-card-label">Total Peserta</div>
+                            <div class="stat-card-change change-up">↑ 87 bulan ini</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Events Table -->
+                <div class="card">
+                    <div class="card-header">
+                        📋 Event Terbaru
+                        <a href="admin-events.html" class="btn btn-outline btn-sm">Kelola Events →</a>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Tipe</th>
+                                    <th>Tanggal</th>
+                                    <th>Tiket Terjual</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="table-event-title">Java Jazz Festival 2025</div>
+                                        <div class="table-event-sub">🌐 Online</div>
+                                    </td>
+                                    <td><span class="event-type-badge"
+                                            style="position:static;background:rgba(37,99,235,0.1);color:var(--primary);">Musik
+                                            & Konser</span></td>
+                                    <td>25 Apr 2025</td>
+                                    <td>376 / 500</td>
+                                    <td><span class="status-badge status-active">active</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="event-detail.html" class="btn btn-outline btn-sm">Detail</a>
+                                            <a href="admin-create-event.html" class="btn btn-primary btn-sm">Edit</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-event-title">Webinar AI & Machine Learning 2025</div>
+                                        <div class="table-event-sub">🌐 Online</div>
+                                    </td>
+                                    <td><span class="event-type-badge webinar-badge"
+                                            style="position:static;">Webinar</span></td>
+                                    <td>10 Mei 2025</td>
+                                    <td>211 / 300</td>
+                                    <td><span class="status-badge status-active">active</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="event-detail.html" class="btn btn-outline btn-sm">Detail</a>
+                                            <a href="admin-create-event.html" class="btn btn-primary btn-sm">Edit</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-event-title">Stand Up Comedy Night</div>
+                                        <div class="table-event-sub">📍 Jakarta Selatan</div>
+                                    </td>
+                                    <td><span class="event-type-badge comedy-badge"
+                                            style="position:static;">Comedy</span></td>
+                                    <td>15 Mei 2025</td>
+                                    <td>89 / 200</td>
+                                    <td><span class="status-badge status-pending">pending</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="event-detail.html" class="btn btn-outline btn-sm">Detail</a>
+                                            <a href="admin-create-event.html" class="btn btn-primary btn-sm">Edit</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="table-event-title">Djakarta Warehouse Project 2025</div>
+                                        <div class="table-event-sub">📍 Jakarta</div>
+                                    </td>
+                                    <td><span class="event-type-badge festival-badge"
+                                            style="position:static;">Festival</span></td>
+                                    <td>20 Jun 2025</td>
+                                    <td>171 / 1000</td>
+                                    <td><span class="status-badge status-active">active</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="event-detail.html" class="btn btn-outline btn-sm">Detail</a>
+                                            <a href="admin-create-event.html" class="btn btn-primary btn-sm">Edit</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const toggle = document.getElementById('adminSidebarToggle');
+        const sidebar = document.querySelector('.admin-sidebar');
+        if (toggle) {
+            toggle.style.display = 'inline-flex';
+            toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+        }
+    </script>
+</body>
+
+</html>

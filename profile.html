@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - Eventix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></div>
+                <div class="logo-text"><span class="logo-name">Eventix</span><span class="logo-sub">Event Management
+                        System</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="events.html" class="nav-link">Jelajah Event</a>
+                <a href="admin-dashboard.html" class="nav-link">Dashboard Admin</a>
+                <a href="tickets.html" class="nav-link">Tiket Saya</a>
+                <a href="transactions.html" class="nav-link">Transaksi</a>
+            </div>
+            <div class="nav-auth">
+                <a href="profile.html" class="nav-link active">Profil</a>
+                <a href="login.html" class="btn btn-outline btn-sm">Keluar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="user-page">
+        <div class="container">
+            <div class="user-page-header">
+                <h1>👤 My Profile</h1>
+                <p>Kelola informasi akun Anda</p>
+            </div>
+
+            <div class="checkout-layout"> <!-- Use checkout layout for grid-like structure -->
+                <div class="checkout-main">
+                    <form onsubmit="handleUpdateProfile(event)">
+                        <!-- Basic Info -->
+                        <div class="card" style="margin-bottom:1.5rem;">
+                            <div class="card-header">📋 Informasi Dasar</div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Nama Lengkap</label>
+                                    <input type="text" class="form-control light" value="User Demo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Email</label>
+                                    <input type="email" class="form-control light" value="user@eventix.com" disabled>
+                                    <small style="color:var(--text-light);">Email tidak dapat diubah.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Nomor Telepon</label>
+                                    <input type="tel" class="form-control light" value="081234567890">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security -->
+                        <div class="card" style="margin-bottom:1.5rem;">
+                            <div class="card-header">🔒 Keamanan</div>
+                            <div class="card-body">
+                                <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;">Biarkan
+                                    kosong jika tidak ingin mengubah password.</p>
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Password Baru</label>
+                                    <input type="password" class="form-control light" placeholder="••••••••">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" style="color:var(--text);">Konfirmasi Password
+                                        Baru</label>
+                                    <input type="password" class="form-control light" placeholder="••••••••">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;justify-content:flex-end;">
+                            <button type="submit" class="btn btn-primary btn-lg">Simpan Perubahan</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-sidebar">
+                    <div class="card" style="padding:2rem;text-align:center;">
+                        <div class="admin-user-avatar"
+                            style="width:80px;height:80px;margin:0 auto 1rem;font-size:2rem;">U</div>
+                        <h3 style="font-size:1.25rem;">User Demo</h3>
+                        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.5rem;">Member sejak Mar
+                            2025</p>
+                        <hr style="border:none;border-top:1px solid var(--border);margin-bottom:1.5rem;">
+                        <div style="text-align:left;">
+                            <div style="display:flex;justify-content:space-between;margin-bottom:0.75rem;">
+                                <span style="font-size:0.85rem;color:var(--text-muted);">Total Tiket</span>
+                                <span style="font-weight:700;">3</span>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;margin-bottom:0.75rem;">
+                                <span style="font-size:0.85rem;color:var(--text-muted);">Total Transaksi</span>
+                                <span style="font-weight:700;">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Eventix. Dikembangkan dengan ❤️ oleh Tim Dev Eventix.</p>
+                <p>Platform pembayaran aman oleh <strong>Midtrans</strong></p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function handleUpdateProfile(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.textContent = '⏳ Menyimpan...';
+            btn.disabled = true;
+            setTimeout(() => {
+                alert('✅ Profil berhasil diperbarui!');
+                btn.textContent = 'Simpan Perubahan';
+                btn.disabled = false;
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

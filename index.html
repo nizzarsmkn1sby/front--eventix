@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Eventix - Platform manajemen event komprehensif. Buat, kelola, dan jual tiket event dengan mudah dan aman.">
+    <title>Eventix - Buat Event Gratis, Jual Tiket Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Eventix</span>
+                    <span class="logo-sub">Event Management System</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="events.html" class="nav-link">Jelajah Event</a>
+                <a href="admin-dashboard.html" class="nav-link">Dashboard Admin</a>
+                <a href="tickets.html" class="nav-link">Tiket Saya</a>
+                <a href="transactions.html" class="nav-link">Transaksi</a>
+                <a href="profile.html" class="nav-link">Profil</a>
+            </div>
+
+            <div class="nav-auth">
+                <a href="login.html" class="btn btn-outline btn-sm">Masuk</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Daftar</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badges">
+                <span class="badge badge-glow">👑 Best Event Management Platform</span>
+            </div>
+            <h1 class="hero-title">Bikin Momen Seru <span class="text-gradient">Jadi Nyata</span></h1>
+            <p class="hero-desc">Dari konser musik gokil sampai webinar insightful, semua ada di sini. Cari event
+                favoritmu dan dapetin tiketnya sekarang juga!</p>
+
+            <div class="hero-categories">
+                <a href="events.html" class="cat-btn active">
+                    <span>🎵</span> Semua Event
+                </a>
+                <a href="events.html?type=musik-konser" class="cat-btn">
+                    <span>🎸</span> Musik & Konser
+                </a>
+                <a href="events.html?type=webinar" class="cat-btn">
+                    <span>💻</span> Webinar
+                </a>
+                <a href="events.html?type=comedy" class="cat-btn">
+                    <span>😂</span> Comedy
+                </a>
+                <a href="events.html?type=pameran-festival" class="cat-btn">
+                    <span>🎪</span> Festival
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">5K+</span>
+                    <span class="stat-label">Event Aktif</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">120K+</span>
+                    <span class="stat-label">Tiket Terjual</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">50K+</span>
+                    <span class="stat-label">Pengguna</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8fafc" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- POPULAR EVENTS SECTION -->
+    <section class="section events-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🔥 Trending</div>
+                <h2 class="section-title">Event Populer</h2>
+                <p class="section-desc">Jangan lewatkan event-event menarik yang sedang trending</p>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <a href="event-detail.html" class="event-card">
+                    <div class="event-banner">
+                        <div class="event-banner-placeholder music-bg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18V5l12-2v13" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="6" cy="18" r="3" stroke="white" stroke-width="1.5" />
+                                <circle cx="18" cy="16" r="3" stroke="white" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <span class="event-type-badge">Musik & Konser</span>
+                        <span class="event-hot-badge">🔥 Trending</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-meta">
+                            <span class="event-location online">🌐 Online</span>
+                        </div>
+                        <h3 class="event-title">Java Jazz Festival 2025</h3>
+                        <div class="event-date-row">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#6b7280" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="#6b7280" stroke-width="2" />
+                            </svg>
+                            <span>25 Apr 2025, 19:00</span>
+                        </div>
+                        <div class="event-price-row">
+                            <span class="event-price">Rp 350.000</span>
+                            <span class="event-price-label">/ tiket</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Event Card 2 -->
+                <a href="event-detail.html" class="event-card">
+                    <div class="event-banner">
+                        <div class="event-banner-placeholder webinar-bg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke="white" stroke-width="1.5" />
+                                <path d="M8 21h8M12 17v4" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="event-type-badge webinar-badge">Webinar</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-meta">
+                            <span class="event-location online">🌐 Online</span>
+                        </div>
+                        <h3 class="event-title">Webinar AI & Machine Learning 2025</h3>
+                        <div class="event-date-row">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#6b7280" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="#6b7280" stroke-width="2" />
+                            </svg>
+                            <span>10 Mei 2025, 09:00</span>
+                        </div>
+                        <div class="event-price-row">
+                            <span class="event-price free">GRATIS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Event Card 3 -->
+                <a href="event-detail.html" class="event-card">
+                    <div class="event-banner">
+                        <div class="event-banner-placeholder comedy-bg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" />
+                                <path d="M8 13s1.5 2 4 2 4-2 4-2" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="9" cy="10" r="1" fill="white" />
+                                <circle cx="15" cy="10" r="1" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="event-type-badge comedy-badge">Comedy</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-meta">
+                            <span class="event-location offline">📍 Offline</span>
+                        </div>
+                        <h3 class="event-title">Stand Up Comedy Night - Raditya Dika</h3>
+                        <div class="event-date-row">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#6b7280" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="#6b7280" stroke-width="2" />
+                            </svg>
+                            <span>15 Mei 2025, 20:00</span>
+                        </div>
+                        <div class="event-price-row">
+                            <span class="event-price">Rp 200.000</span>
+                            <span class="event-price-label">/ tiket</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Event Card 4 -->
+                <a href="event-detail.html" class="event-card">
+                    <div class="event-banner">
+                        <div class="event-banner-placeholder festival-bg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="event-type-badge festival-badge">Festival</span>
+                        <span class="event-hot-badge">⚡ Segera</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-meta">
+                            <span class="event-location offline">📍 Offline</span>
+                        </div>
+                        <h3 class="event-title">Djakarta Warehouse Project 2025</h3>
+                        <div class="event-date-row">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#6b7280" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="#6b7280" stroke-width="2" />
+                            </svg>
+                            <span>20 Jun 2025, 18:00</span>
+                        </div>
+                        <div class="event-price-row">
+                            <span class="event-price">Rp 500.000</span>
+                            <span class="event-price-label">/ tiket</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Event Card 5 -->
+                <a href="event-detail.html" class="event-card">
+                    <div class="event-banner">
+                        <div class="event-banner-placeholder music-bg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18V5l12-2v13" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="6" cy="18" r="3" stroke="white" stroke-width="1.5" />
+                                <circle cx="18" cy="16" r="3" stroke="white" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <span class="event-type-badge">Musik & Konser</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-meta">
+                            <span class="event-location offline">📍 Offline</span>
+                        </div>
+                        <h3 class="event-title">Konser Dewa 19 Reunion Tour</h3>
+                        <div class="event-date-row">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#6b7280" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="#6b7280" stroke-width="2" />
+                            </svg>
+                            <span>07 Jul 2025, 19:30</span>
+                        </div>
+                        <div class="event-price-row">
+                            <span class="event-price">Rp 450.000</span>
+                            <span class="event-price-label">/ tiket</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Event Card 6 -->
+                <a href="event-detail.html" class="event-card">
+                    <div class="event-banner">
+                        <div class="event-banner-placeholder webinar-bg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke="white" stroke-width="1.5" />
+                                <path d="M8 21h8M12 17v4" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span class="event-type-badge webinar-badge">Webinar</span>
+                    </div>
+                    <div class="event-info">
+                        <div class="event-meta">
+                            <span class="event-location online">🌐 Online</span>
+                        </div>
+                        <h3 class="event-title">Workshop UI/UX Design Masterclass</h3>
+                        <div class="event-date-row">
+                            <svg width="14" height="14" fill="none" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" stroke="#6b7280" stroke-width="2" />
+                                <path d="M16 2v4M8 2v4M3 10h18" stroke="#6b7280" stroke-width="2" />
+                            </svg>
+                            <span>30 Apr 2025, 13:00</span>
+                        </div>
+                        <div class="event-price-row">
+                            <span class="event-price">Rp 150.000</span>
+                            <span class="event-price-label">/ tiket</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="section-footer">
+                <a href="events.html" class="btn btn-primary btn-lg">
+                    Lihat Semua Event
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY EVENTIX SECTION -->
+    <section class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">✨ Worth Your Time</div>
+                <h2 class="section-title">Kenapa Harus Eventix?</h2>
+                <p class="section-desc">Kami nggak cuma jualan tiket, tapi memastikan pengalaman kamu dari awal sampai
+                    akhir itu asik dan tanpa drama.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Gak Pake Ribet</h3>
+                    <p>Checkout cuma hitungan detik. Gak perlu isi form panjang-panjang, langsung dapet tiket di email.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-green">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3>Keamanan Prioritas</h3>
+                    <p>Pakai sistem Midtrans yang udah terjamin. Transaksi kamu aman, datamu juga gak bakal bocor.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor"
+                                stroke-width="2" />
+                            <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3>Update Terus</h3>
+                    <p>Tiap hari ada aja event baru. Konser artis favorit sampai workshop skill baru, lengkap banget!
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-orange">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3>E-Ticket Digital</h3>
+                    <p>Dapatkan tiket digital langsung di dashboard. Tidak perlu cetak, cukup tunjukkan di pintu masuk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-glow"></div>
+        </div>
+        <div class="container cta-content">
+            <div class="cta-icon">🤘</div>
+            <h2>Punya Acara Keren Tapi Bingung Mulainya?</h2>
+            <p>Bikin event di Eventix cuma butuh waktu 2 menit. Gratis, gampang, dan pastinya profesional.</p>
+            <div class="cta-buttons">
+                <a href="register.html" class="btn btn-white btn-lg">
+                    Mulai Buat Event Gratis
+                </a>
+                <a href="events.html" class="btn btn-outline-white btn-lg">
+                    Jelajahi Event
+                </a>
+            </div>
+            <div class="cta-note">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" />
+                    <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" />
+                </svg>
+                Gratis selamanya · Tidak perlu kartu kredit · Setup dalam 2 menit
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">Eventix</span>
+                    </div>
+                </a>
+                <p>Platform event terlengkap dan terpercaya di Indonesia. Ribuan event menunggu kamu!.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2" />
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Tentang Eventix</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Event Creator</h4>
+                    <ul>
+                        <li><a href="admin-dashboard.html">Dashboard Admin</a></li>
+                        <li><a href="admin-create-event.html">Buat Event</a></li>
+                        <li><a href="#">Panduan Creator</a></li>
+                        <li><a href="#">Harga & Komisi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ikuti Kami</h4>
+                    <p style="color:#94a3b8;font-size:0.875rem;margin-bottom:1rem;">Dapatkan update event terbaru
+                        langsung di inbox kamu.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Masukkan emailmu..." class="newsletter-input">
+                        <button class="btn btn-primary btn-sm">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Eventix. Dikembangkan dengan ❤️ oleh Tim Dev Eventix.</p>
+                <p>Platform pembayaran aman oleh <strong>Midtrans</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticket - Eventix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @media print {
+
+            .navbar,
+            .no-print,
+            footer {
+                display: none !important;
+            }
+
+            body {
+                background: #fff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar no-print" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></div>
+                <div class="logo-text"><span class="logo-name">Eventix</span></div>
+            </a>
+            <div class="nav-auth">
+                <a href="tickets.html" class="btn btn-outline btn-sm">← Kembali</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="user-page">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:1rem;" class="no-print">
+                <p style="color:var(--text-muted);font-size:0.9rem;">🎟️ E-Ticket Eventix — Tunjukkan tiket ini atau
+                    cetak untuk akses masuk</p>
+            </div>
+
+            <div class="eticket-wrapper">
+                <div class="eticket">
+                    <div class="eticket-header">
+                        <div class="eticket-logo">🎵 Eventix</div>
+                        <div class="eticket-subtitle">E-TICKET OFFICIAL</div>
+                    </div>
+                    <div class="eticket-body">
+                        <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:0.5rem;">Java Jazz Festival 2025</h2>
+                        <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem;">Musik & Konser · 🌐
+                            Online</p>
+
+                        <div class="eticket-code">
+                            <span class="eticket-code-num">EVX-2025-JJF-00124</span>
+                            <!-- QR Code Placeholder -->
+                            <div
+                                style="width:140px;height:140px;margin:0 auto;background:var(--bg);border:3px solid var(--dark);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:10px;">
+                                <svg viewBox="0 0 200 200" width="120" height="120">
+                                    <rect x="0" y="0" width="80" height="80" rx="8" fill="#0a1c33" />
+                                    <rect x="10" y="10" width="60" height="60" rx="4" fill="white" />
+                                    <rect x="20" y="20" width="40" height="40" rx="2" fill="#0a1c33" />
+                                    <rect x="120" y="0" width="80" height="80" rx="8" fill="#0a1c33" />
+                                    <rect x="130" y="10" width="60" height="60" rx="4" fill="white" />
+                                    <rect x="140" y="20" width="40" height="40" rx="2" fill="#0a1c33" />
+                                    <rect x="0" y="120" width="80" height="80" rx="8" fill="#0a1c33" />
+                                    <rect x="10" y="130" width="60" height="60" rx="4" fill="white" />
+                                    <rect x="20" y="140" width="40" height="40" rx="2" fill="#0a1c33" />
+                                    <rect x="100" y="100" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="120" y="100" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="140" y="100" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="100" y="120" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="160" y="120" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="100" y="140" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="120" y="140" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="150" y="140" width="10" height="10" fill="#0a1c33" />
+                                    <rect x="90" y="0" width="10" height="80" fill="#0a1c33" opacity="0.1" />
+                                    <rect x="105" y="0" width="5" height="100" fill="#0a1c33" opacity="0.08" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <hr class="eticket-divider">
+
+                        <div class="eticket-info-grid">
+                            <div class="eticket-info-item">
+                                <label>Nama Pemegang</label>
+                                <span>User Demo</span>
+                            </div>
+                            <div class="eticket-info-item">
+                                <label>Status</label>
+                                <span style="color:var(--success);">✅ VALID</span>
+                            </div>
+                            <div class="eticket-info-item">
+                                <label>Tanggal Event</label>
+                                <span>25 Apr 2025</span>
+                            </div>
+                            <div class="eticket-info-item">
+                                <label>Waktu</label>
+                                <span>19:00 WIB</span>
+                            </div>
+                            <div class="eticket-info-item">
+                                <label>Jumlah Tiket</label>
+                                <span>1 Tiket</span>
+                            </div>
+                            <div class="eticket-info-item">
+                                <label>Tipe</label>
+                                <span>Regular</span>
+                            </div>
+                        </div>
+
+                        <div
+                            style="margin-top:1.25rem;padding:0.75rem;background:#dbeafe;border-radius:8px;font-size:0.85rem;color:#1e40af;">
+                            <strong>🔗 Link Online Event:</strong><br>
+                            <a href="https://meet.google.com/eventix-jazz"
+                                style="color:#1e40af;word-break:break-all;">https://meet.google.com/eventix-jazz</a>
+                        </div>
+                    </div>
+                    <div class="eticket-footer">
+                        Tiket ini hanya berlaku untuk 1 orang · Dilarang dipindahtangankan<br>
+                        Diterbitkan oleh <strong>Eventix</strong> · Powered by Midtrans
+                    </div>
+                </div>
+
+                <div class="no-print" style="display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;">
+                    <button onclick="window.print()" class="btn btn-primary btn-lg">
+                        🖨️ Cetak Tiket
+                    </button>
+                    <a href="tickets.html" class="btn btn-outline btn-lg">← Kembali</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

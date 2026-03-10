@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Transaksi - Eventix Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <div class="logo-text"><span class="logo-name">Eventix</span><span class="logo-sub">Admin
+                            Panel</span></div>
+                </a>
+            </div>
+            <nav class="admin-sidebar-nav">
+                <div class="admin-nav-group">MAIN MENU</div>
+                <a href="admin-dashboard.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="admin-events.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" />
+                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                    Kelola Events
+                </a>
+                <a href="admin-transactions.html" class="admin-nav-item active">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                        <path d="M2 10h20" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Transaksi
+                </a>
+                <div class="admin-nav-group">SETTINGS</div>
+                <a href="index.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                    Ke Halaman Utama
+                </a>
+                <a href="login.html" class="admin-nav-item">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <div>
+                    <button id="adminSidebarToggle"
+                        style="background:none;border:none;cursor:pointer;margin-right:1rem;display:none;">
+                        <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                            <path d="M3 12h18M3 6h18M3 18h18" stroke="#1e293b" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <span class="admin-topbar-title">Kelola Transaksi</span>
+                </div>
+                <div class="admin-user">
+                    <div style="text-align:right;">
+                        <div style="font-size:0.875rem;font-weight:700;">Admin Eventix</div>
+                        <div style="font-size:0.75rem;color:var(--text-muted);">admin@eventix.com</div>
+                    </div>
+                    <div class="admin-user-avatar">A</div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-page-header">
+                    <div>
+                        <div class="admin-page-title">Kelola Transaksi</div>
+                        <div class="admin-page-sub">Pantau semua pesanan dan pembayaran tiket ✨</div>
+                    </div>
+                    <div class="header-actions" style="display:flex;gap:0.75rem;">
+                        <button class="btn btn-outline">
+                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Export CSV
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="card" style="margin-bottom:1.5rem;padding:1.25rem;">
+                    <div class="admin-filters"
+                        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;">
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label class="form-label">Cari Order</label>
+                            <input type="text" class="form-control light" placeholder="Order ID atau Nama...">
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label class="form-label">Status</label>
+                            <select class="select-control">
+                                <option>Semua Status</option>
+                                <option>Paid</option>
+                                <option>Pending</option>
+                                <option>Failed</option>
+                                <option>Expired</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label class="form-label">Event</label>
+                            <select class="select-control">
+                                <option>Semua Event</option>
+                                <option>Java Jazz Festival 2025</option>
+                                <option>Webinar AI & Machine Learning</option>
+                                <option>Stand Up Comedy Night</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;display:flex;align-items:flex-end;">
+                            <button class="btn btn-primary" style="width:100%;">Filter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Pembeli</th>
+                                    <th>Event</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Waktu</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight:600;color:var(--primary);">ORD-EVX-20250012</td>
+                                    <td>
+                                        <div style="font-weight:600;">Budiman Sudjatmiko</div>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);">budiman@gmail.com</div>
+                                    </td>
+                                    <td>Java Jazz Festival 2025</td>
+                                    <td>Rp 360.500</td>
+                                    <td><span class="status-badge status-active">paid</span></td>
+                                    <td>20 Mar, 14:20</td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;color:var(--primary);">ORD-EVX-20250011</td>
+                                    <td>
+                                        <div style="font-weight:600;">Siti Nurhaliza</div>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);">siti@yahoo.com</div>
+                                    </td>
+                                    <td>Webinar AI & Machine Learning</td>
+                                    <td>GRATIS</td>
+                                    <td><span class="status-badge status-active">paid</span></td>
+                                    <td>20 Mar, 11:05</td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;color:var(--primary);">ORD-EVX-20250010</td>
+                                    <td>
+                                        <div style="font-weight:600;">Ahmad Dhani</div>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);">dhani@republik.com</div>
+                                    </td>
+                                    <td>Stand Up Comedy Night</td>
+                                    <td>Rp 412.000</td>
+                                    <td><span class="status-badge status-pending">pending</span></td>
+                                    <td>19 Mar, 21:55</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn btn-outline btn-sm">Detail</button>
+                                            <button class="btn btn-primary btn-sm">Approve</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;color:var(--primary);">ORD-EVX-20250009</td>
+                                    <td>
+                                        <div style="font-weight:600;">Lesti Kejora</div>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);">lesti@billboard.id</div>
+                                    </td>
+                                    <td>Djakarta Warehouse Project</td>
+                                    <td>Rp 500.000</td>
+                                    <td><span class="status-badge status-danger"
+                                            style="background:rgba(239, 68, 68, 0.1);color:var(--danger);">failed</span>
+                                    </td>
+                                    <td>19 Mar, 10:15</td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:600;color:var(--primary);">ORD-EVX-20250008</td>
+                                    <td>
+                                        <div style="font-weight:600;">Raffi Ahmad</div>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);">raffi@rans.com</div>
+                                    </td>
+                                    <td>Java Jazz Festival 2025</td>
+                                    <td>Rp 721.000</td>
+                                    <td><span class="status-badge status-active">paid</span></td>
+                                    <td>18 Mar, 15:30</td>
+                                    <td>
+                                        <button class="btn btn-outline btn-sm">Detail</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer"
+                        style="padding:1.25rem;display:flex;justify-content:space-between;align-items:center;">
+                        <span style="font-size:0.875rem;color:var(--text-muted);">Menampilkan 5 dari 124
+                            transaksi</span>
+                        <div class="pagination" style="display:flex;gap:0.5rem;">
+                            <button class="btn btn-outline btn-sm" disabled>Prev</button>
+                            <button class="btn btn-primary btn-sm">1</button>
+                            <button class="btn btn-outline btn-sm">2</button>
+                            <button class="btn btn-outline btn-sm">3</button>
+                            <button class="btn btn-outline btn-sm">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const sidebarToggle = document.getElementById('adminSidebarToggle');
+        const sidebar = document.querySelector('.admin-sidebar');
+        if (sidebarToggle) {
+            sidebarToggle.style.display = 'inline-flex';
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+    </script>
+</body>
+
+</html>

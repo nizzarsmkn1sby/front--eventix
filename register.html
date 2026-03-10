@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - Eventix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-glow auth-glow-1"></div>
+        <div class="auth-glow auth-glow-2"></div>
+        <div class="auth-card">
+            <div class="auth-logo">
+                <a href="index.html" style="display:inline-flex;align-items:center;gap:0.75rem;text-decoration:none;">
+                    <div class="logo-icon" style="margin:0;"><svg width="22" height="22" viewBox="0 0 24 24"
+                            fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></div>
+                    <span class="logo-name">Eventix</span>
+                </a>
+            </div>
+            <h2 class="auth-title">Create Account</h2>
+            <p class="auth-sub">Join Eventix today!</p>
+
+            <div class="alert alert-danger" id="regError" style="display:none;"></div>
+
+            <form onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" id="regEmail" class="form-control" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="regPass" class="form-control" placeholder="Min. 8 karakter" required
+                        minlength="8">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Konfirmasi Password</label>
+                    <input type="password" id="regPassConf" class="form-control" placeholder="Ulangi password" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">Saya setuju dengan <a href="#" style="color:#60a5fa;">Syarat &
+                            Ketentuan</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary"
+                    style="width:100%;justify-content:center;padding:0.875rem;font-size:1rem;">
+                    Buat Akun
+                </button>
+            </form>
+            <div class="auth-link">Sudah punya akun? <a href="login.html">Login here</a></div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function handleRegister(e) {
+            e.preventDefault();
+            const pass = document.getElementById('regPass').value;
+            const conf = document.getElementById('regPassConf').value;
+            const errEl = document.getElementById('regError');
+            if (pass !== conf) {
+                errEl.style.display = 'flex';
+                errEl.innerHTML = '<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2"/></svg> Password tidak cocok!';
+                return;
+            }
+            alert('Akun berhasil dibuat! Silakan login.');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi Saya - Eventix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></div>
+                <div class="logo-text"><span class="logo-name">Eventix</span><span class="logo-sub">Event Management
+                        System</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="events.html" class="nav-link">Jelajah Event</a>
+                <a href="admin-dashboard.html" class="nav-link">Dashboard Admin</a>
+                <a href="tickets.html" class="nav-link">Tiket Saya</a>
+                <a href="transactions.html" class="nav-link active">Transaksi</a>
+            </div>
+            <div class="nav-auth">
+                <a href="profile.html" class="nav-link">Profil</a>
+                <a href="login.html" class="btn btn-outline btn-sm">Keluar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="user-page">
+        <div class="container">
+            <div class="user-page-header">
+                <h1>💳 My Transactions</h1>
+                <p>Riwayat transaksi pembelian tiket Anda</p>
+            </div>
+
+            <div class="transaction-items">
+                <!-- Transaction 1 -->
+                <div class="transaction-item">
+                    <div class="transaction-header">
+                        <div>
+                            <div class="transaction-event-title">Java Jazz Festival 2025</div>
+                            <div class="transaction-order">Order ID: EVX-ORD-2025-00124</div>
+                        </div>
+                        <span class="status-badge status-active">paid</span>
+                    </div>
+                    <div class="transaction-details">
+                        <div class="transaction-detail-item">
+                            <label>Tanggal Event</label>
+                            <span>25 Apr 2025, 19:00</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Jumlah Tiket</label>
+                            <span>1 Tiket</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Total Pembayaran</label>
+                            <span style="color:var(--primary);font-size:1rem;">Rp 360.500</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Tanggal Transaksi</label>
+                            <span>20 Mar 2025</span>
+                        </div>
+                    </div>
+                    <div class="transaction-actions">
+                        <a href="ticket-detail.html" class="btn btn-primary btn-sm">Lihat Tiket</a>
+                        <button class="btn btn-outline btn-sm">Detail</button>
+                    </div>
+                </div>
+
+                <!-- Transaction 2 -->
+                <div class="transaction-item">
+                    <div class="transaction-header">
+                        <div>
+                            <div class="transaction-event-title">Webinar AI & Machine Learning 2025</div>
+                            <div class="transaction-order">Order ID: EVX-ORD-2025-00089</div>
+                        </div>
+                        <span class="status-badge status-active">paid</span>
+                    </div>
+                    <div class="transaction-details">
+                        <div class="transaction-detail-item">
+                            <label>Tanggal Event</label>
+                            <span>10 Mei 2025, 09:00</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Jumlah Tiket</label>
+                            <span>1 Tiket</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Total Pembayaran</label>
+                            <span style="color:var(--success);font-size:1rem;">GRATIS</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Tanggal Transaksi</label>
+                            <span>25 Mar 2025</span>
+                        </div>
+                    </div>
+                    <div class="transaction-actions">
+                        <a href="ticket-detail.html" class="btn btn-primary btn-sm">Lihat Tiket</a>
+                        <button class="btn btn-outline btn-sm">Detail</button>
+                    </div>
+                </div>
+
+                <!-- Transaction 3 (pending) -->
+                <div class="transaction-item">
+                    <div class="transaction-header">
+                        <div>
+                            <div class="transaction-event-title">Stand Up Comedy Night - Raditya Dika</div>
+                            <div class="transaction-order">Order ID: EVX-ORD-2025-00041</div>
+                        </div>
+                        <span class="status-badge status-pending">pending</span>
+                    </div>
+                    <div class="transaction-details">
+                        <div class="transaction-detail-item">
+                            <label>Tanggal Event</label>
+                            <span>15 Mei 2025, 20:00</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Jumlah Tiket</label>
+                            <span>2 Tiket</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Total Pembayaran</label>
+                            <span style="color:var(--primary);font-size:1rem;">Rp 412.000</span>
+                        </div>
+                        <div class="transaction-detail-item">
+                            <label>Tanggal Transaksi</label>
+                            <span>28 Mar 2025</span>
+                        </div>
+                    </div>
+                    <div class="transaction-actions">
+                        <a href="checkout.html" class="btn btn-primary btn-sm">Selesaikan Pembayaran</a>
+                        <button class="btn btn-outline btn-sm">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Eventix. Dikembangkan dengan ❤️ oleh Tim Dev Eventix.</p>
+                <p>Platform pembayaran aman oleh <strong>Midtrans</strong></p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
